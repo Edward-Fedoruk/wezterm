@@ -1,17 +1,38 @@
+function chooseBgOfTheDay()
+    local imagePath = '/users/efedo1/.config/wezterm/'
+    local bgImages = {
+        imagePath .. 'jp-bg-yellow.jpg',
+        imagePath .. 'jp-bg-blue.jpg',
+        imagePath .. 'jp-bg-blue.jpg',
+        imagePath .. 'jp-bg-blue.jpg',
+        imagePath .. 'jp-bg-blue.jpg',
+        imagePath .. 'jp-bg-blue.jpg',
+        imagePath .. 'jp-bg-blue.jpg',
+    }
+    local day = os.date("*t").wday - 1
+    return bgImages[day]
+end
+
 local config = {}
 
-config.color_scheme = 'Catppuccin Mocha'
+config.color_scheme = 'Catppuccin Macchiato'
 config.window_background_opacity = 1
 config.hide_tab_bar_if_only_one_tab = true
 config.window_frame = {
-	active_titlebar_bg = '#1e1e2f'
+    active_titlebar_bg = '#1e1e2f'
 }
 config.macos_window_background_blur = 100
-config.window_background_image = '/users/efedo1/.config/wezterm/jp-bg-blue.jpg'
+--config.window_background_image = chooseBgOfTheDay()
 config.window_background_image_hsb = {
-	brightness = 0.05,
-	hue = 1.0,
-	saturation = 1.0,
+    brightness = 0.05,
+    hue = 1.0,
+    saturation = 1.0,
+}
+config.window_padding = {
+    left = 2,
+    right = 2,
+    top = 0,
+    bottom = 0,
 }
 config.font_size = 14.0
 return config
