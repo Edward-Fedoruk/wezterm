@@ -1,18 +1,3 @@
-function chooseBgOfTheDay()
-    local imagePath = '/users/efedo1/.config/wezterm/'
-    local bgImages = {
-        imagePath .. 'jp-bg-yellow.jpg',
-        imagePath .. 'jp-bg-blue.jpg',
-        imagePath .. 'jp-bg-blue.jpg',
-        imagePath .. 'jp-bg-blue.jpg',
-        imagePath .. 'jp-bg-blue.jpg',
-        imagePath .. 'jp-bg-blue.jpg',
-        imagePath .. 'jp-bg-blue.jpg',
-    }
-    local day = os.date("*t").wday - 1
-    return bgImages[day]
-end
-
 local config = {}
 
 config.color_scheme = 'Catppuccin Macchiato'
@@ -22,7 +7,6 @@ config.window_frame = {
     active_titlebar_bg = '#1e1e2f'
 }
 config.macos_window_background_blur = 100
---config.window_background_image = chooseBgOfTheDay()
 config.window_background_image_hsb = {
     brightness = 0.05,
     hue = 1.0,
