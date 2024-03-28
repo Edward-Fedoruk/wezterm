@@ -15,8 +15,8 @@ config.window_background_image_hsb = {
 config.window_padding = {
     left = 2,
     right = 2,
-    top = 0,
-    bottom = 0,
+    top = 2,
+    bottom = 2,
 }
 config.font_size = 14.0
 return config
